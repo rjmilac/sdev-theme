@@ -1,0 +1,22 @@
+input, select, textarea{
+    outline: none;
+    box-sizing: border-box;
+
+    &:active, &:focus{
+        outline: none;
+    }
+
+    &.has-error{
+        border-color: $errorColor;
+    }
+
+}
+
+button{
+    outline: none;
+
+    &:active, &:focus{
+        outline: none;
+    }
+}
+

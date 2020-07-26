@@ -1,0 +1,36 @@
+#page-preloader{
+    @include overlayFull(fixed, 9999);
+    background: $lightColor;
+    line-height: 0;
+    font-size: 0;
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    .preloader-wrapper{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        img{
+            display: inline-block;
+            max-width: 80%;
+            &.logo-large{
+                width: 320px;
+                @media(max-width: 420px){
+                    width: 80%;
+                }
+            }
+            &.loader{
+                margin-top: 20px;
+            }
+        }
+    }
+
+}
+
+html{
+    overflow: hidden;
+    &.loaded{
+        overflow: auto;
+    }
+}

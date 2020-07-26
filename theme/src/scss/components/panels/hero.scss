@@ -1,0 +1,125 @@
+.panel-hero{
+    border-top: 2px solid getColor(2);
+
+    &[data-ht="single"]{
+        padding: 100px 0px;
+        border-top: none;
+        @include linearGradient(180deg, getColor(2), getColor(1));
+
+        h1{
+            margin-top: 0.825em;
+        }
+        
+        @media(max-width: $bp_desktopSmall){
+            padding: 80px 0px;
+        }
+    
+        @media(max-width: $bp_tabletPortrait3){
+            padding: 70px 0px;
+        }
+        
+        @media(max-width: $bp_mobile){
+            padding: 50px 0px;
+        }
+    }
+
+    .hero-content{
+        color: $lightColor;
+    }
+
+    .hero-carousel-item{
+        padding: 100px 0px 175px;
+        min-height: 550px;
+        color: $lightColor;
+        background-color: getColor(1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 60% 50%;
+
+        @media(max-width: $bp_mobile){
+            padding: 100px 0px 125px;
+            min-height: 450px;
+        }
+    }
+
+    .hci-content-wrap{
+        position: relative;
+        margin: 0 0;
+        max-width: 626px;
+        padding: 45px 55px 33px;
+        border-radius: 50px;
+        @include linearGradient(180deg, getColor(2), getColor(1));
+
+        h1,
+        .btn-primary{
+            font-weight: 500;
+        }
+
+        @media(max-width: $bp_mobile){
+            text-align: center;
+            padding: 35px 5% 23px;
+            border-radius: 35px;
+
+            h1{
+                min-height: 3.45em;
+            }
+        }
+    }
+
+    .carousel-navs{
+        text-align: right;    
+        position: relative;
+        top: -12px;
+
+        .carousel-nav{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 15px;
+            font-weight: 200;
+            color: $lightColor;
+            cursor: pointer;
+            user-select: none;
+            @include transition(0.45s);
+
+            &:hover{
+                opacity: 0.65;
+            }
+
+            &.nav-prev{
+                margin-right: 12px;
+            }
+            &.nav-next{
+                margin-left: 12px;
+            }
+        }
+
+        .nav-bullet{
+            line-height: 1em;
+            font-size: 0;
+            height: 10px;
+            width: 10px;
+            background: $lightColor;
+            border-radius: 50%;
+            margin: 0 4px;
+
+            &.active-bullet{
+                background: getColor(2);
+            }
+        }
+
+        @media(max-width: $bp_mobile){
+            text-align: center;
+            top: 0px;
+            margin-top: 20px;
+        }
+    }
+    
+    .container-block{
+        padding: 0px 20px;
+        
+        @media(max-width: $bp_desktopSmall){
+            padding: 0px $gutterProp;
+        }
+    }
+
+}

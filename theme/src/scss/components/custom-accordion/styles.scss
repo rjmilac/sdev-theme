@@ -1,0 +1,177 @@
+.custom-accordion{
+    margin-bottom: $gutter;
+
+    .accordion-item{
+        border-top: 1px solid #CCCCCC;
+
+        .ai-title{
+            padding: 25px 0px;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+
+            a{
+                @include typography(getFont(1), 18px, 1.55em, 500, getColor(1));
+                display: inline-block;
+                
+                @media(max-width: $bp_desktopMedium){
+                    font-size: 17px;
+                }
+                @media(max-width: $bp_tabletLandscape){
+                    font-size: 16px;
+                }
+                @media(max-width: $bp_mobile){
+                    font-size: 14px;
+                }
+            }
+
+            img, h4{
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            img{
+                width: 50px;
+                height: auto;
+                margin-right: 13px;
+                
+                @media(max-width: 600px){
+                    width: 40px;
+                    margin-right: 10px;
+                }
+            }
+
+            h4{
+                text-transform: uppercase;
+                line-height: 1.4em;
+            }
+
+            .ai-sublabel{
+                p{
+                    margin-bottom: 12px;
+    
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &.in-transition{
+                pointer-events: none;
+            }
+
+            &:not(.no-accordion):after{
+                content: "+";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: -0.55em;
+                @include typography(getFont(1), 40px, 1em, 500, getColor(1));
+            }
+
+            &.expanded:after{
+                content: "";
+                width: 21px;
+                height: 17px;
+                margin-top: -17px;
+                border-bottom: 3px solid getColor(1);
+            }
+
+            @media(max-width: 600px){
+                padding: 20px 0px;
+            }
+        }
+
+        .ai-content{
+            display: none;
+            padding-bottom: $gutter;
+
+            p{
+                margin-bottom: 1.15em;
+                padding-right: 5%;
+                box-sizing: border-box;
+
+                &.aic-speaker > span{
+                    display: block;
+                }
+
+                &.aic-handout{
+                    margin-bottom: 0;
+                    line-height: 1.78em;
+                }
+
+                a{
+                    color: getColor(1);
+                }
+            }
+        }
+    }
+    
+    &.type-2{
+        .accordion-item:first-child{
+            border-top: 0px solid transparent;
+        }
+        .ai-title{
+            width: 100%;
+            box-sizing: border-box;
+            cursor: default;
+
+            & > a{
+                cursor: pointer;
+            }
+            
+            &:after{
+                display: none !important;
+            }
+
+            .ai-sublabel{
+                margin-top: 12px;
+                margin-bottom: 20px;
+                position: relative;
+
+                &.ai-open-trigger{
+                    cursor: pointer;
+                }
+                
+                &.ai-open-trigger:after{
+                    content: "+";
+                    position: absolute;    
+                    bottom: -7px;
+                    right: 0;
+                    margin-top: 0;
+                    @include typography(getFont(1), 40px, 1em, 500, getColor(1));
+                }
+                
+                &.in-transition{
+                    pointer-events: none;
+                }
+                
+                &.expanded:after{
+                    content: "";
+                    width: 21px;
+                    height: 17px;
+                    bottom: 12px;
+                    margin-top: 0px;
+                    border-bottom: 3px solid getColor(1);
+                }
+            }
+
+            .image-cell{
+                width: 50px;
+                height: auto;
+                padding-right: 13px;
+                
+                img{
+                    width: 100% !important;
+                    margin-right: 0px !important;
+                }
+                
+                @media(max-width: 600px){
+                    width: 40px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+}

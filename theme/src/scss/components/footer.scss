@@ -1,0 +1,7 @@
+#page-footer{
+    
+    .copyright-line{
+        @include typography(getFont(1), 14px, 1.6em, 300, getColor(3));
+    }
+
+}

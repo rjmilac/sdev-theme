@@ -1,0 +1,147 @@
+h1{
+    @include typography(getFont(1), 48px, 1.15em, 600, inherit);
+    letter-spacing: -3px;
+    margin-bottom: 0.825em;
+    
+    @media(max-width: $bp_desktopMedium){
+        font-size: 44px;
+    }
+    @media(max-width: $bp_tabletLandscape){
+        font-size: 40px;
+    }
+    @media(max-width: $bp_mobile){
+        font-size: 38px;
+    }
+    @media(max-width: $bp_mobileMedium){
+        font-size: 36px;
+    }
+    @media(max-height: 400px){
+        font-size: 32px;
+    }
+}
+h2{
+    @include typography(getFont(1), 36px, 1.25em, 600, inherit);
+    margin-bottom: 1.4em;
+
+    @media(max-width: $bp_desktopSmall){
+        font-size: 32px;
+    }
+    @media(max-width: $bp_mobileMenuShift){
+        font-size: 28px;
+    }
+    @media(max-width: $bp_mobile){
+        font-size: 27px;
+    }
+    @media(max-height: 400px){
+        font-size: 26px;
+    }
+}
+h3{
+    @include typography(getFont(1), 36px, 1.3em, 600, getColor(2));
+    margin-bottom: 1.5em;
+    
+    @media(max-width: $bp_desktop){
+        font-size: 32px;
+    }
+    @media(max-width: $bp_desktopMedium){
+        font-size: 27px;
+    }
+    @media(max-width: $bp_tabletLandscape){
+        font-size: 25px;
+    }
+    @media(max-width: $bp_mobile){
+        font-size: 22px;
+    }
+}
+h4{
+    @include typography(getFont(1), 25px, 1.25em, 500, inherit);
+    letter-spacing: -1.5px;
+    
+    @media(max-width: $bp_desktop){
+        font-size: 23px;
+    }
+    @media(max-width: $bp_desktopMedium){
+        font-size: 22px;
+    }
+    @media(max-width: $bp_mobile){
+        font-size: 20px;
+    }
+}
+
+h5{
+    @include typography(getFont(1), 25px, 1.2em, 600, inherit);
+    letter-spacing: -1.5px;
+    margin-bottom: 0.5em;
+    
+    @media(max-width: $bp_desktopSmall){
+        font-size: 22px;
+    }
+    @media(max-width: $bp_mobile){
+        font-size: 20px;
+    }
+    @media(max-width: $bp_mobileMedium){
+        font-size: 18px;
+    }
+}
+
+ul, ol, li, p{
+    @include typography(getFont(1), 17px, 1.4em, 300, inherit);
+    margin-bottom: 1.35em;
+    letter-spacing: -0.8px;
+
+    &.alt{
+        color: getColor(2);
+    }
+
+    @media(max-width: $bp_desktopMedium){
+        font-size: 16px;
+    }
+    @media(max-width: $bp_tabletLandscape){
+        font-size: 15px;
+    }
+    @media(max-width: $bp_mobile){
+        font-size: 14px;
+    }
+}
+
+b, strong{
+    font-weight: 700;
+
+    &.fw-600{
+        font-weight: 600;
+    }
+}
+
+.panel{
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-color: inherit;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .panel-mask{
+        @include overlayFull(absolute, 3);
+        background: #000;
+    }
+
+    .panel-content{
+        position: relative;
+    }
+
+    &.panel-divider{
+        height: 36px;
+        width: 100%;
+        background-color: #fff;
+        font-size: 0;
+        line-height: 0;
+
+        @media(max-width: $bp_desktopMedium){
+            height: $gutterMedium;
+        }
+        @media(max-width: $bp_tabletLandscape){
+            height: $gutter;
+        }
+    }
+
+}

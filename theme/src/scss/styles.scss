@@ -1,0 +1,30 @@
+/* Styles entry point */
+
+/* start load hooks */
+@import "hooks/reset";
+/* end */
+
+/* dependencies */
+@import "vendor/all";
+@import "library/fonts";
+/* end */
+
+/* libraries */
+@import "library/global.variables";
+@import "library/global.mixins";
+@import "library/global.functions";
+@import "library/common";
+/* end */
+
+/* before components load hooks */
+@import "hooks/vendor.overrides";
+/* end */
+
+/* components */
+@import "components/all";
+/* end */
+
+/* after components load hooks */
+@import "hooks/main.overrides";
+@import "hooks/final.overrides";
+/* end */

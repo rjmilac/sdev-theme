@@ -1,0 +1,32 @@
+.btn-primary{
+
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 1em;
+    padding: 9px 16px;
+    border: 1px solid $lightColor;
+    text-decoration: none;
+    outline: none;
+    @include typography(getFont(1), 17px, 1.25em, 500, $lightColor);
+    @include transition(0.35s);
+
+    &:not(.disabled):hover{
+        background: getColor(3);
+        text-decoration: none;
+        outline: none;
+    }
+
+    &:active, 
+    &:focus{
+        text-decoration: none;
+        outline: none;
+    }
+
+    &.disabled{
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.3;
+    }
+
+}
