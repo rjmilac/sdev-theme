@@ -28,6 +28,13 @@ Using webpack to compile and build dev files.
 
 ---
 
+## Templating
+
+1. The layout view file name must be have the same name as the layout name in the **acf_panels** flexible content field. For example: You have a layout in the flexible content named **"hero"**, your view file name must be **"hero.php"** and saved inside the **views/panels/** directory. All view files are stored in the **"views"** directory.
+
+
+---
+
 ## Built-in Modules
 
 1. Preloader
