@@ -48,4 +48,22 @@ MVC-pattern
 
 ---
 
+## Using the Panel Animation Module
+
+1. Available options, default options are located in *src/js/app/lazyload/contentlazyload.ux.js*:
+    a. **data-offset** - how far the element will animate to its target position in px. *Default: 100*.
+    b. **data-origin** - value can be "y" for vertical animation, or "x" for horizon animation. *Default: 'y'*.
+    c. **data-delay** - delay in seconds. *Default: 0.1*.
+    d. **data-duration** - duration of the animation in seconds. *Default: 0.8*.
+    e. **data-opacity** - starting opacity. *Default: 0*.
+
+2. Classes to use:
+    a. **anim-on-load** - animation will commence on page load.
+    b. **anim-on-scroll** - animation will commence when the element is visible in viewport when scrolling.
+
+3. Example usage:
+        *<div class="anim-on-scroll" data-offset="100" ...></div>*
+
+---
+
 Goodluck!!!
