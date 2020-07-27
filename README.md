@@ -1,7 +1,6 @@
-**SDEV Theme Boilerplate Setup & Development**
+# SDEV Theme Boilerplate Setup & Development
 
-Download this repository. 
-Do not push here with your project.
+***Download this repository. Do not push here with your project. Remove git folder after downloading, then start your own project repository***
 
 ---
 
