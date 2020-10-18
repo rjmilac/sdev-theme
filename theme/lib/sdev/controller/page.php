@@ -1,6 +1,6 @@
 <?php
     /**
-     *  Event Announcement Controller
+     *  Page Controller
      *
      *
      * @package SDEV

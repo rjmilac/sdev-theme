@@ -1,6 +1,6 @@
 <?php
     /**
-     *  Product Controller
+     *  Post Controller
      *
      *
      * @package SDEV
